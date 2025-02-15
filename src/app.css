@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'Teko';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url(/fonts/Teko-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Teko Bold';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url(/fonts/Teko-Bold.ttf) format('truetype');
+}
+
+:root {
+	--sans: 'Teko', sans-serif;
+	--sans-bold: 'Teko Bold', sans-serif;
+}
+
+body {
+	margin: 0;
+	font-family: var(--sans);
+	overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+}
