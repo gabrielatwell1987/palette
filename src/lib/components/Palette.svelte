@@ -84,12 +84,6 @@
 	}
 </script>
 
-<ul>
-	<li>
-		<a href="/about">About</a>
-	</li>
-</ul>
-
 <div class="wrapper">
 	<div class="inner">
 		<input
@@ -116,35 +110,7 @@
 
 <style>
 	:global(body) {
-		background-color: #f0f0f0;
-	}
-
-	ul {
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		gap: 1em;
 		background-color: #fff;
-		margin: 0;
-
-		& li {
-			text-decoration: none;
-			margin-top: clamp(1em, 1vw, 2em);
-
-			& a {
-				text-align: center;
-				color: rgb(70, 70, 70);
-				text-decoration: inherit;
-				font-family: var(--sans-bold);
-				font-size: clamp(1rem, 3vw, 2rem);
-				font-weight: 800;
-				letter-spacing: 3px;
-
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
 	}
 
 	.wrapper {
@@ -201,7 +167,7 @@
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
 		font-family: var(--sans);
-		font-size: clamp(0.8rem, 1vw, 0.75rem);
+		font-size: clamp(0.8rem, 2.5vw, 1.35rem);
 		text-shadow: none;
 		width: 3em;
 		height: 3em;
@@ -219,7 +185,6 @@
 		border: none;
 		font-family: var(--sans);
 		font-size: clamp(0.875rem, 1.5vw, 1.22rem);
-		border-bottom: 3px solid rgb(107, 107, 107);
 		width: 100%;
 		max-width: 100%;
 		box-sizing: border-box;

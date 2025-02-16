@@ -3,17 +3,24 @@
 
 <article>
 	<div class="inner">
-		<h1>About this website</h1>
+		<h1>About PixiPalette</h1>
+
+		<h3>Discover your perfect palette</h3>
 
 		<p>
-			This is a color palette generator but it will show you the colors of an image that you
-			provide.
+			Have you ever stumbled upon a color in an image and wondered, "What rgb color is that?"
+			PixiPalette is here to answer that question. This web app allows you to upload an image and
+			extracts the dominant colors from it, providing you with their hex values. It's a handy tool
+			for designers, artists, or anyone who appreciates color.
 		</p>
 
-		<p>This project was built with the new svelte 5 syntax!</p>
+		<p>
+			PixiPalette is a simple, efficient, and free tool that helps you find the colors you love in
+			any image. Whether you're a designer looking for inspiration, an artist seeking the perfect
+			shade, or just curious about the colors in your favorite photo, PixiPalette makes it easy to
+			discover and use color palettes from images.
+		</p>
 	</div>
-
-	<a href="/">Home</a>
 </article>
 
 <style>
@@ -38,28 +45,22 @@
 				letter-spacing: 2px;
 			}
 
+			& h3 {
+				color: rgb(75, 75, 75);
+				font-family: var(--sans);
+				font-size: clamp(1.15rem, 1vw, 1.75rem);
+				font-weight: 600;
+				margin: 0;
+				padding: 0;
+			}
+
 			& p {
 				color: rgb(75, 75, 75);
 				font-family: var(--sans);
 				font-size: clamp(1.25rem, 2vw, 1.5rem);
 				font-weight: 600;
-			}
-		}
-
-		& a {
-			color: rgb(70, 70, 70);
-			text-decoration: inherit;
-			font-family: var(--sans-bold);
-			font-size: clamp(1rem, 3vw, 2rem);
-			font-weight: 800;
-			letter-spacing: 3px;
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-
-			&:hover {
-				text-decoration: underline;
+				width: 75%;
+				margin-inline: auto;
 			}
 		}
 	}
