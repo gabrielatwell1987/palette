@@ -1,6 +1,5 @@
 <script>
 	import Title from '$lib/components/Title.svelte';
-	// import Burger from '$lib/components/Burger.svelte';
 
 	let isMenuOpen = $state(false);
 
