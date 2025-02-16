@@ -181,6 +181,10 @@
 		.nav-content {
 			height: 9em;
 		}
+
+		.nav-link {
+			margin-right: 1em;
+		}
 	}
 
 	@media (width > 768px) {
