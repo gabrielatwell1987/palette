@@ -10,11 +10,11 @@
 		<p>
 			Have you ever stumbled upon a color in an image and wondered, "What rgb color is that?"
 			PixiPalette is here to answer that question. This web app allows you to upload an image and
-			extracts the dominant colors from it, providing you with their hex values. It's a handy tool
+			extracts the dominant colors from it, providing you with their rgb values. It's a handy tool
 			for designers, artists, or anyone who appreciates color.
 		</p>
 
-		<p>
+		<p class="second">
 			PixiPalette is a simple, efficient, and free tool that helps you find the colors you love in
 			any image. Whether you're a designer looking for inspiration, an artist seeking the perfect
 			shade, or just curious about the colors in your favorite photo, PixiPalette makes it easy to
@@ -40,27 +40,33 @@
 			& h1 {
 				color: rgb(59, 59, 59);
 				font-family: var(--sans-bold);
-				font-size: clamp(1.5rem, 6vw, 5rem);
+				font-size: clamp(1.5rem, 6vw, 8rem);
 				font-weight: 800;
 				letter-spacing: 2px;
+				margin: 0;
 			}
 
 			& h3 {
 				color: rgb(75, 75, 75);
 				font-family: var(--sans);
-				font-size: clamp(1.15rem, 1vw, 1.75rem);
+				font-size: clamp(1.15rem, 4vw, 2.75rem);
 				font-weight: 600;
-				margin: 0;
+				margin-block: -1rem;
 				padding: 0;
 			}
 
 			& p {
 				color: rgb(75, 75, 75);
 				font-family: var(--sans);
-				font-size: clamp(1.25rem, 2vw, 1.5rem);
+				font-size: clamp(1.25rem, 3vw, 1.75rem);
 				font-weight: 600;
-				width: 75%;
+				max-width: 90%;
 				margin-inline: auto;
+				margin-top: 5em;
+			}
+
+			& .second {
+				margin-top: 1rem;
 			}
 		}
 	}
