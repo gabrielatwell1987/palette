@@ -9,7 +9,7 @@
 	}
 </script>
 
-<button class="burger" aria-label="Menu" aria-expanded={isOpen} onclick={() => toggleMenu}>
+<button class="burger" aria-label="Menu" aria-expanded={isOpen} onclick={toggleMenu}>
 	<div class="burger-lines">
 		<span class="line {isOpen ? 'open' : ''}"></span>
 		<span class="line {isOpen ? 'open' : ''}"></span>
@@ -19,6 +19,7 @@
 
 <style>
 	.burger {
+		position: relative;
 		display: block;
 		padding: 0.5rem;
 		background: none;
@@ -28,7 +29,7 @@
 
 	.burger-lines {
 		width: 2rem;
-		height: 1.3rem;
+		height: 1.5rem;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -37,12 +38,13 @@
 
 	.line {
 		display: block;
-		height: 0.1rem;
+		height: 0.3rem;
 		width: 100%;
-		background-color: currentColor;
+		background-color: #000;
 		transition:
 			transform 0.5s,
 			opacity 0.5s;
+		border: 1px solid red;
 	}
 
 	.line.open:nth-child(1) {

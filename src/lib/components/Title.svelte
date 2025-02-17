@@ -26,8 +26,8 @@
 		padding: 0;
 
 		& img {
-			width: clamp(4em, 15vw, 20em);
-			height: clamp(4em, 15vw, 20em);
+			width: clamp(6.5em, 15vw, 20em);
+			height: clamp(6.5em, 15vw, 20em);
 
 			@media (width <= 768px) {
 				margin-left: -1rem;
