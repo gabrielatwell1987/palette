@@ -91,7 +91,7 @@
 	.mobile-menu {
 		display: none;
 		position: fixed;
-		top: 4em;
+		top: 5.5em;
 		left: 0;
 		right: 0;
 		width: 100%;
