@@ -2,6 +2,7 @@
 	let imageUrl = $state('');
 	let colors = $state([]);
 	let imageInput;
+	let colorFormat = $state('rgb');
 
 	function handleImageUpload(event) {
 		const file = event.target.files[0];
@@ -82,6 +83,50 @@
 		// Return white for dark colors, black for light colors
 		return luminance > 0.5 ? '#000000' : '#ffffff';
 	}
+
+	function convertColor(rgbStr, format) {
+		// Extract RGB values
+		const [r, g, b] = rgbStr.match(/\d+/g).map(Number);
+
+		switch (format) {
+			case 'hex':
+				return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+			case 'hsl':
+				// Convert RGB to HSL
+				const r1 = r / 255;
+				const g1 = g / 255;
+				const b1 = b / 255;
+
+				const max = Math.max(r1, g1, b1);
+				const min = Math.min(r1, g1, b1);
+				let h,
+					s,
+					l = (max + min) / 2;
+
+				if (max === min) {
+					h = s = 0;
+				} else {
+					const d = max - min;
+					s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+					switch (max) {
+						case r1:
+							h = (g1 - b1) / d + (g1 < b1 ? 6 : 0);
+							break;
+						case g1:
+							h = (b1 - r1) / d + 2;
+							break;
+						case b1:
+							h = (r1 - g1) / d + 4;
+							break;
+					}
+					h /= 6;
+				}
+
+				return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+			default:
+				return rgbStr;
+		}
+	}
 </script>
 
 <div class="wrapper">
@@ -98,10 +143,18 @@
 			<img src={imageUrl} alt="Uploaded item" class="preview-image" />
 		{/if}
 
+		<select class="format-select" bind:value={colorFormat}>
+			<option value="rgb">RGB</option>
+			<option value="hex">HEX</option>
+			<option value="hsl">HSL</option>
+		</select>
+
 		<div class="color-palette">
 			{#each colors as color}
 				<div class="color-box" style:background-color={color}>
-					<span class="color-value" style:color={getContrastColor(color)}>{color}</span>
+					<span class="color-value" style:color={getContrastColor(color)}>
+						{convertColor(color, colorFormat)}
+					</span>
 				</div>
 			{/each}
 		</div>
@@ -169,16 +222,18 @@
 		font-family: var(--sans);
 		font-size: clamp(0.8rem, 2.5vw, 1.35rem);
 		text-shadow: none;
-		width: 3em;
-		height: 3em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 5rem;
+		text-align: center;
+		width: auto;
+		height: auto;
+		word-break: break-all;
 	}
 
 	.file-input {
-		color: rgb(43, 42, 42);
+		color: hsl(0, 0%, 41%);
 		padding: 0.5rem 0.75rem;
 		padding-bottom: 1rem;
 		margin-bottom: 1.2rem;
@@ -202,6 +257,40 @@
 			&:hover {
 				background-color: #e0e0e0;
 			}
+		}
+	}
+
+	.format-select {
+		padding: 0.5rem;
+		border: 1px solid #e0e0e0;
+		border-radius: 4px;
+		font-family: var(--sans-bold);
+		font-size: clamp(1rem, 2vw, 1.5rem);
+		letter-spacing: 5px;
+		background-color: transparent;
+		cursor: pointer;
+		width: 100%;
+		max-width: 200px;
+		margin-bottom: 0.5rem;
+		color: #242424;
+
+		&:hover {
+			border-color: #bdbdbd;
+		}
+
+		&:focus {
+			outline: none;
+			border-color: #242424;
+			box-shadow: 0 0 0 2px rgba(36, 36, 36, 0.1);
+
+			&:hover {
+				border-color: #242424;
+			}
+		}
+
+		& option {
+			padding: 0.5rem;
+			font-family: var(--sans);
 		}
 	}
 

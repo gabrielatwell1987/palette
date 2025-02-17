@@ -8,10 +8,10 @@
 		<h3>Discover your perfect palette</h3>
 
 		<p>
-			Have you ever stumbled upon a color in an image and wondered, "What rgb color is that?"
+			Have you ever stumbled upon a color in an image and wondered, "What color value is that?"
 			PixiPalette is here to answer that question. This web app allows you to upload an image and
-			extracts the dominant colors from it, providing you with their rgb values. It's a handy tool
-			for designers, artists, or anyone who appreciates color.
+			extracts the dominant colors from it, providing you with three different color values. It's a
+			handy tool for designers, artists, or anyone who appreciates color.
 		</p>
 
 		<p class="second">
@@ -38,7 +38,7 @@
 			margin-top: 2em;
 
 			& h1 {
-				color: rgb(59, 59, 59);
+				color: hsl(0, 0%, 41%);
 				font-family: var(--sans-bold);
 				font-size: clamp(1.5rem, 6vw, 8rem);
 				font-weight: 800;
@@ -47,19 +47,20 @@
 			}
 
 			& h3 {
-				color: rgb(75, 75, 75);
+				color: rgb(0, 0, 0);
 				font-family: var(--sans);
 				font-size: clamp(1.15rem, 4vw, 2.75rem);
 				font-weight: 600;
-				margin-block: -1rem;
+				margin-block: -0.5rem;
 				padding: 0;
 			}
 
 			& p {
-				color: rgb(75, 75, 75);
+				color: hsl(0, 0%, 0%);
 				font-family: var(--sans);
 				font-size: clamp(1.25rem, 3vw, 1.75rem);
 				font-weight: 600;
+				letter-spacing: 2px;
 				max-width: 90%;
 				margin-inline: auto;
 				margin-top: 5em;

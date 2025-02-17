@@ -35,7 +35,7 @@
 		}
 
 		& h1 {
-			color: rgb(59, 59, 59);
+			color: hsl(0, 0%, 41%);
 			font-family: var(--sans-bold);
 			font-size: clamp(1.25rem, 5vw, 4rem);
 			font-weight: 800;
