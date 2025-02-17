@@ -175,6 +175,7 @@
 		gap: 1.2rem;
 		background-color: #fff;
 		min-height: 100dvh;
+		width: 100%;
 	}
 
 	.inner {
@@ -185,7 +186,7 @@
 		justify-content: center;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		padding: 0.5rem 1rem;
-		max-width: 600px;
+		width: clamp(250px, 90vw, 1000px);
 		margin-bottom: 18em;
 	}
 
@@ -198,7 +199,7 @@
 
 	.color-palette {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 		gap: 0.6rem;
 		width: 100%;
 		padding: 0.5rem;
@@ -294,17 +295,24 @@
 		}
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 500px) {
 		.wrapper {
 			padding: 0.8rem;
+			width: 99%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 
 		.inner {
 			padding: 0.5rem;
+			margin-inline: auto;
 		}
 
 		.color-palette {
 			grid-template-columns: repeat(2, 1fr);
+			padding: 0;
+			width: 100%;
 		}
 
 		.color-value {
