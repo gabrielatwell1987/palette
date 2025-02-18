@@ -14,7 +14,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: clamp(1em, 2vw, 2em);
+		font-size: clamp(1em, 1.45vw, 2em);
 		border-radius: 100%;
 		background-color: var(--background-color);
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
