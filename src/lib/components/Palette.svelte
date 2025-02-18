@@ -221,7 +221,7 @@
 		padding: 0.25rem 0.75rem;
 		border-radius: 4px;
 		font-family: var(--sans);
-		font-size: clamp(0.8rem, 2.5vw, 1.35rem);
+		font-size: clamp(1.1rem, 2.5vw, 1.35rem);
 		text-shadow: none;
 		display: flex;
 		justify-content: center;
@@ -244,6 +244,7 @@
 		width: 100%;
 		max-width: 100%;
 		box-sizing: border-box;
+		cursor: pointer;
 
 		&::file-selector-button {
 			margin-right: 1em;
@@ -315,8 +316,8 @@
 			width: 100%;
 		}
 
-		.color-value {
+		/* .color-value {
 			font-size: 0.75rem;
-		}
+		} */
 	}
 </style>
