@@ -14,8 +14,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: clamp(2em, 2vw, 5em);
-		height: clamp(2em, 2vw, 5em);
+		font-size: clamp(1em, 2vw, 2em);
 		border-radius: 100%;
 		background-color: var(--background-color);
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -25,8 +24,8 @@
 	}
 
 	svg {
-		width: clamp(2em, 2vw, 5em);
-		height: clamp(2em, 2vw, 5em);
+		width: clamp(2em, 2vw, 3em);
+		height: clamp(2em, 2vw, 3em);
 		fill: #242424;
 
 		&:hover {
