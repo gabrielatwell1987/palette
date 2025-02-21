@@ -58,7 +58,7 @@
 	.nav-container {
 		max-width: 1200px;
 		margin-inline: auto;
-		padding: 0 1rem;
+		padding: 0;
 	}
 
 	.nav-content {
@@ -66,7 +66,11 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 4em;
-		padding: 1.5rem 1rem;
+		padding: 1.5rem 1rem 0 1rem;
+
+		@media (width <= 500px) {
+			padding: 0.5rem 1rem 0 1rem;
+		}
 	}
 
 	.desktop-menu {
@@ -80,19 +84,19 @@
 		font-size: clamp(1.25rem, 3vw, 4rem);
 		font-weight: 900;
 		letter-spacing: 5px;
-	}
 
-	.nav-link:hover {
-		background-color: hsl(0, 0%, 31%);
-		color: #f0f0f0;
-		border-radius: 5px;
-		padding: 0.1rem 0.75rem;
+		&:hover {
+			background-color: hsl(0, 0%, 31%);
+			color: #f0f0f0;
+			border-radius: 5px;
+			padding: 0.1rem 0.75rem;
+		}
 	}
 
 	.mobile-menu {
 		display: none;
 		position: fixed;
-		top: 8.5em;
+		top: 5em;
 		left: 0;
 		right: 0;
 		width: 100%;
@@ -106,11 +110,11 @@
 		gap: 1em;
 		z-index: 50;
 		margin-top: 3em;
-	}
 
-	.mobile-menu.show {
-		display: flex;
-		transition: display 0.75s ease-in-out;
+		&.show {
+			display: flex;
+			transition: display 0.75s ease-in-out;
+		}
 	}
 
 	/* Burger Menu */
@@ -164,11 +168,11 @@
 		text-align: center;
 		width: 100%;
 		margin: 0;
-	}
 
-	.mobile-nav-link:hover {
-		background-color: hsl(0, 0%, 31%);
-		color: #f0f0f0;
+		&:hover {
+			background-color: hsl(0, 0%, 31%);
+			color: #f0f0f0;
+		}
 	}
 
 	@media (min-width: 768px) {
