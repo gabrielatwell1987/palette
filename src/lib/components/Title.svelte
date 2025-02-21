@@ -42,10 +42,15 @@
 			letter-spacing: 2px;
 			margin: 0;
 			padding: 0;
+
+			@media (width <= 768px) {
+				margin-left: -1rem;
+			}
 		}
 
 		@media (width <= 768px) {
 			gap: 0.5rem;
+			margin-left: -1rem;
 		}
 	}
 </style>

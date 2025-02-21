@@ -92,7 +92,7 @@
 	.mobile-menu {
 		display: none;
 		position: fixed;
-		top: 5.5em;
+		top: 8.5em;
 		left: 0;
 		right: 0;
 		width: 100%;
@@ -101,14 +101,16 @@
 		margin: 0;
 		padding: 0;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
-		gap: 3em;
+		gap: 1em;
 		z-index: 50;
+		margin-top: 3em;
 	}
 
 	.mobile-menu.show {
 		display: flex;
+		transition: display 0.75s ease-in-out;
 	}
 
 	/* Burger Menu */
