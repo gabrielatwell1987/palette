@@ -163,7 +163,7 @@
 
 <style>
 	:global(body) {
-		background-color: #fff;
+		background-color: #f0f0f0;
 	}
 
 	.wrapper {
@@ -173,7 +173,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1.2rem;
-		background-color: #fff;
+		/* background-color: #f0f0f0; */
 		min-height: 100dvh;
 		width: 100%;
 	}
@@ -188,6 +188,7 @@
 		padding: 0.5rem 1rem;
 		width: clamp(250px, 90vw, 1000px);
 		margin-bottom: 18em;
+		background-color: #fff;
 	}
 
 	.preview-image {
@@ -252,6 +253,7 @@
 			border: none;
 			border-radius: 5px;
 			background-color: #f0f0f0;
+			color: hsl(0, 0%, 31%);
 			cursor: pointer;
 			font-size: clamp(0.875rem, 1.5vw, 1.22rem);
 			white-space: nowrap;

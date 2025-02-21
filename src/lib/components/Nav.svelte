@@ -66,6 +66,7 @@
 		justify-content: space-between;
 		align-items: center;
 		height: 4em;
+		padding: 1.5rem 1rem;
 	}
 
 	.desktop-menu {
@@ -75,14 +76,14 @@
 	.nav-link {
 		padding: 0.5rem 0.75rem;
 		text-decoration: none;
-		color: inherit;
+		color: hsl(0, 0%, 31%);
 		font-size: clamp(1.25rem, 3vw, 4rem);
-		font-weight: 500;
+		font-weight: 900;
 		letter-spacing: 5px;
 	}
 
 	.nav-link:hover {
-		background-color: #333;
+		background-color: hsl(0, 0%, 31%);
 		color: #f0f0f0;
 		border-radius: 5px;
 		padding: 0.1rem 0.75rem;
@@ -96,7 +97,7 @@
 		right: 0;
 		width: 100%;
 		height: calc(100vh - 4em);
-		background-color: white;
+		background-color: #f0f0f0;
 		margin: 0;
 		padding: 0;
 		flex-direction: column;
@@ -127,14 +128,16 @@
 
 	.bar {
 		width: 100%;
-		height: 2px;
-		background-color: #333;
+		height: 5px;
+		background-color: hsl(0, 0%, 31%);
 		transition: all 0.3s ease-in-out;
 		transform-origin: center;
+		border-radius: 5px;
 	}
 
 	.burger.active .bar:first-child {
-		transform: translateY(12px) rotate(45deg);
+		transform: translateY(10px) rotate(45deg);
+		background-color: hsl(0, 0%, 0%);
 	}
 
 	.burger.active .bar:nth-child(2) {
@@ -143,15 +146,17 @@
 
 	.burger.active .bar:last-child {
 		transform: translateY(-10px) rotate(-45deg);
+		background-color: hsl(0, 0%, 0%);
 	}
 
 	.mobile-nav-link {
 		display: block;
 		padding: 0.75rem 0;
 		text-decoration: none;
-		color: #242424;
+		color: hsl(0, 0%, 31%);
+		font-family: var(--sans-bold);
 		font-size: clamp(2rem, 3vw, 2rem);
-		font-weight: 500;
+		font-weight: 900;
 		letter-spacing: 10px;
 		border-radius: 0.25rem;
 		text-align: center;
@@ -160,7 +165,8 @@
 	}
 
 	.mobile-nav-link:hover {
-		background-color: #444;
+		background-color: hsl(0, 0%, 31%);
+		color: #f0f0f0;
 	}
 
 	@media (min-width: 768px) {
