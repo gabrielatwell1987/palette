@@ -113,6 +113,8 @@
 
 		&.show {
 			display: flex;
+			gap: 7em;
+			margin-top: 5em;
 			transition: display 0.75s ease-in-out;
 		}
 	}
