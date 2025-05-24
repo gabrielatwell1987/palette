@@ -1,5 +1,12 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO
+	title="About PixiPalette"
+	description="What is PixiPalette? A web app that extracts the dominant colors from an image."
+	keywords="PixiPalette, about pixipalette"
+/>
 
 <article>
 	<div class="inner">
