@@ -1,11 +1,9 @@
 <script>
-	import webp from '$lib/logos/pixipalette.webp';
-
 	let { title = 'PixiPalette' } = $props();
 </script>
 
 <section>
-	<img src={webp} alt="PalettePro Logo" />
+	<img src="/logos/pixipalette.webp" alt="PalettePro Logo" />
 
 	<a href="/">
 		<h1>{title}</h1>

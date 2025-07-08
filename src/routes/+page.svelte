@@ -4,9 +4,9 @@
 </script>
 
 <SEO
-	title="PixiPalette - Find out the colors of your images"
-	description="Find out the colors of your images."
-	keywords="PixiPalette, color palette, color extraction, image color, color image values"
+	title="Extract Colors from Images - PixiPalette"
+	description="Discover the perfect color palette from any image"
+	keywords="PixiPalette, color palette, color extraction, image colors, design tools"
 />
 
 <main>

@@ -173,7 +173,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1.2rem;
-		/* background-color: #f0f0f0; */
 		min-height: 100dvh;
 		width: 100%;
 	}

@@ -3,9 +3,10 @@
 </script>
 
 <SEO
-	title="About PixiPalette"
-	description="What is PixiPalette? A web app that extracts the dominant colors from an image."
-	keywords="PixiPalette, about pixipalette"
+	title="About - PixiPalette"
+	description="Learn about PixiPalette and our mission"
+	keywords="pixipalette, about pixipalette"
+	type="website"
 />
 
 <article>
