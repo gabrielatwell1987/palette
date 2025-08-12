@@ -14,6 +14,7 @@
 
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="canonical" href={url} />
 
@@ -37,20 +38,27 @@
 	<meta name="twitter:image:alt" content={`${title} - ${siteName}`} />
 
 	<script type="application/ld+json">
-        {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": siteName,
-            "description": description,
-            "url": baseUrl,
-            "potentialAction": {
-                "@type": "SearchAction",
-                "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": `${baseUrl}/?q={search_term_string}`
-                },
-                "query-input": "required name=search_term_string"
-            }
-        })}
+    {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": siteType === "article" ? "Article" : "WebSite",
+        "name": siteName,
+        "headline": title,
+        "description": description,
+        "url": url,
+        "image": ogImage,
+        ...(siteType === "article" && {
+            "author": { "@type": "Organization", "name": siteName },
+            "publisher": { "@type": "Organization", "name": siteName, "logo": ogImage },
+            "datePublished": new Date().toISOString()
+        }),
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${baseUrl}/?q={search_term_string}`
+            },
+            "query-input": "required name=search_term_string"
+        }
+    })}
 	</script>
 </svelte:head>
