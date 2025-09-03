@@ -153,7 +153,7 @@
 	}
 
 	.burger.active .bar:last-child {
-		transform: translateY(-10px) rotate(-45deg);
+		transform: translateY(-9px) rotate(-45deg);
 		background-color: hsl(0, 0%, 0%);
 	}
 
